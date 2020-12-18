@@ -65,12 +65,18 @@ def generate_stylesheet():
         "style": {
             "shape": 'square',
             # "background-color": "#fcba03",
-            "background-color": "#f553ba",
+            "background-color": "#80ff99",
         }
         },{
         "selector": ".havedrug",
         "style": {
             "background-color": "#f54242",
+        } 
+        },{
+        "selector": ".kamei",
+        "style": {
+            "width": "85",
+            "height": "85",
         } 
         },
         # {

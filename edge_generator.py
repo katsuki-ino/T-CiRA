@@ -13,7 +13,7 @@ with open('data/noVCP/drug_properties.pkl', 'rb') as f:
 
 
 def paging():
-    
+    kamei = ['DRD2','KCNN3', 'SLC6A4', 'COMT', 'ATP4', 'ADRA2C', 'GABRG2', 'OPRM1', 'MAOA', 'MAOB', 'DRD4', 'HTR1A', 'DRD3']
     path = pd.read_table('NGLY1_plot_graph_data_20201214_no_VCP.txt')
     # phase_df = pd.read_json('phase_data.json')
 
@@ -42,15 +42,38 @@ def paging():
     nodes = list(set(nodes))
 
     page_nodes = []
+    # for name in nodes:
+    #     if phase_df.loc[name, 'max_phase']==4:
+    #         page_nodes.append({'data': {'id': name, 'label': name}, 'classes': 'havedrug'})
+    #     elif name in starts:
+    #         page_nodes.append({'data': {'id': name, 'label': name}, 'classes': 'causality'})
+    #     elif name in ends:
+    #         page_nodes.append({'data': {'id': name, 'label': name},  'classes': 'responsive'})
+    #     else:
+    #         page_nodes.append({'data': {'id': name, 'label': name}})
+
+
     for name in nodes:
-        if phase_df.loc[name, 'max_phase']==4:
-            page_nodes.append({'data': {'id': name, 'label': name}, 'classes': 'havedrug'})
-        elif name in starts:
-            page_nodes.append({'data': {'id': name, 'label': name}, 'classes': 'causality'})
+        node = {}
+        node['data'] = {'id': name, 'label': name}
+        if name in starts:
+            node['classes'] = 'causality'
         elif name in ends:
-            page_nodes.append({'data': {'id': name, 'label': name},  'classes': 'responsive'})
-        else:
-            page_nodes.append({'data': {'id': name, 'label': name}})
+            node['classes'] = 'responsive'
+
+        if phase_df.loc[name, 'max_phase']==4:
+            if 'classes' not in node.keys():
+                node['classes'] = 'havedrug'
+            else:
+                node['classes'] = node['classes']+' havedrug'
+
+        if name in kamei:
+            if 'classes' not in node.keys():
+                node['classes'] = 'kamei'
+            else:
+                node['classes'] = node['classes']+' kamei'
+        
+        page_nodes.append(node)
             
     return page_nodes, edges
 
