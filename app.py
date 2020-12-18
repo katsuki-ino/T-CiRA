@@ -28,6 +28,7 @@ app = dash.Dash(__name__,
                 prevent_initial_callbacks=True, 
                 # suppress_callback_exceptions=True
                 )
+server = app.server
 
 app.layout = html.Div(
     [
@@ -59,5 +60,5 @@ def update_janbotron_by_tap(target):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
-    # app.run_server()
+    # app.run_server(debug=True)
+    app.run_server()
