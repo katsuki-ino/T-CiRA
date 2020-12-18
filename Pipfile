@@ -11,6 +11,7 @@ dash-cytoscape = "*"
 dash-html-components = "*"
 flask = "*"
 dash-table = "*"
+gunicorn = "*"
 
 [dev-packages]
 pyinstaller = "*"
