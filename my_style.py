@@ -75,8 +75,8 @@ def generate_stylesheet():
         },{
         "selector": ".kamei",
         "style": {
-            "width": "85",
-            "height": "85",
+            "width": "60",
+            "height": "60",
         } 
         },
         # {
