@@ -13,7 +13,7 @@ with open('data/noVCP/drug_properties.pkl', 'rb') as f:
 
 
 def paging():
-    kamei = ['DRD2','KCNN3', 'SLC6A4', 'COMT', 'ATP4', 'ADRA2C', 'GABRG2', 'OPRM1', 'MAOA', 'MAOB', 'DRD4', 'HTR1A', 'DRD3']
+    kamei = ['DRD2','KCNN3', 'SLC6A3', 'COMT', 'ATP4', 'ADRA2C', 'GABRG2', 'OPRM1', 'MAOA', 'MAOB', 'DRD4', 'HTR1A', 'DRD3']
     path = pd.read_table('NGLY1_plot_graph_data_20201214_no_VCP.txt')
     # phase_df = pd.read_json('phase_data.json')
 
