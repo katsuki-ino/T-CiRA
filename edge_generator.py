@@ -6,7 +6,7 @@ import dash_table
 # phase_df = pd.read_json('phase_data.json')
 with open('data/noVCP/gene_drug_report.pkl', 'rb') as f:
     phase_df = pickle.load(f)
-phase_df = phase_df.set_index('Gene')
+# phase_df = phase_df.set_index('Gene')
 
 with open('data/noVCP/drug_properties.pkl', 'rb') as f:
     drug_properties = pickle.load(f)
