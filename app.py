@@ -6,6 +6,7 @@ import re
 import base64
 
 import flask
+import dash_auth
 import pandas as pd
 import dash
 import dash_table
@@ -29,6 +30,15 @@ app = dash.Dash(__name__,
                 # suppress_callback_exceptions=True
                 )
 server = app.server
+
+VALID_USERNAME_PASSWORD_PAIRS = {
+    'ngly1': 'fronteo2020'
+}
+
+auth = dash_auth.BasicAuth(
+    app,
+    VALID_USERNAME_PASSWORD_PAIRS
+)
 
 app.layout = html.Div(
     [

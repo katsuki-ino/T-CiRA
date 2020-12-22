@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7f603a2dc232f824cc459ba29c375b30e674df57f16e91265a7c0366eef8105f"
+            "sha256": "0456d22f24ead84665a3cc3f79bbf9865718eeaa9736feb5db895e2456e46aeb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -51,6 +51,27 @@
             ],
             "version": "==1.0.9"
         },
+        "certifi": {
+            "hashes": [
+                "sha256:1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c",
+                "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
+            ],
+            "version": "==2020.12.5"
+        },
+        "chardet": {
+            "hashes": [
+                "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa",
+                "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+            ],
+            "version": "==4.0.0"
+        },
+        "chart-studio": {
+            "hashes": [
+                "sha256:a17283b62470306d77060b200f13f9749c807dd15613c113d36f8d057f5c7019",
+                "sha256:fd183185d6e6d31c642567145c1a862f941ca9c7695aac8b2f3ebbcbcea31a7a"
+            ],
+            "version": "==1.1.0"
+        },
         "click": {
             "hashes": [
                 "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a",
@@ -64,6 +85,13 @@
             ],
             "index": "pypi",
             "version": "==1.18.1"
+        },
+        "dash-auth": {
+            "hashes": [
+                "sha256:861006912d2124668da566b4caa3feefbbe2cc72702834a16cc64db7a7ddfbb9"
+            ],
+            "index": "pypi",
+            "version": "==1.4.1"
         },
         "dash-core-components": {
             "hashes": [
@@ -113,6 +141,20 @@
             ],
             "version": "==1.8.0"
         },
+        "flask-login": {
+            "hashes": [
+                "sha256:6d33aef15b5bcead780acc339464aae8a6e28f13c90d8b1cf9de8b549d1c0b4b",
+                "sha256:7451b5001e17837ba58945aead261ba425fdf7b4f0448777e597ddab39f4fba0"
+            ],
+            "index": "pypi",
+            "version": "==0.5.0"
+        },
+        "flask-seasurf": {
+            "hashes": [
+                "sha256:c57918c17e9afd988bdc30d8dcb7bfb833741dee38b06c1bbd17821d6fa2b6cf"
+            ],
+            "version": "==0.2.2"
+        },
         "future": {
             "hashes": [
                 "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
@@ -126,6 +168,13 @@
             ],
             "index": "pypi",
             "version": "==20.0.4"
+        },
+        "idna": {
+            "hashes": [
+                "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6",
+                "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"
+            ],
+            "version": "==2.10"
         },
         "itsdangerous": {
             "hashes": [
@@ -270,6 +319,13 @@
             ],
             "version": "==2020.4"
         },
+        "requests": {
+            "hashes": [
+                "sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804",
+                "sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e"
+            ],
+            "version": "==2.25.1"
+        },
         "retrying": {
             "hashes": [
                 "sha256:08c039560a6da2fe4f2c426d0766e284d3b736e355f8dd24b37367b0bb41973b"
@@ -282,6 +338,20 @@
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
             "version": "==1.15.0"
+        },
+        "ua-parser": {
+            "hashes": [
+                "sha256:46ab2e383c01dbd2ab284991b87d624a26a08f72da4d7d413f5bfab8b9036f8a",
+                "sha256:47b1782ed130d890018d983fac37c2a80799d9e0b9c532e734c67cf70f185033"
+            ],
+            "version": "==0.10.0"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08",
+                "sha256:d8ff90d979214d7b4f8ce956e80f4028fc6860e4431f731ea4a8c08f23f99473"
+            ],
+            "version": "==1.26.2"
         },
         "werkzeug": {
             "hashes": [
@@ -308,10 +378,10 @@
         },
         "pyinstaller-hooks-contrib": {
             "hashes": [
-                "sha256:bf4543a16c9c6e9dd2d70ea3fee78b81d3357a68f706df471d990213892259d9",
-                "sha256:dd752c88c1c7bb6920f7de248c12d4411c0463877e5e64afdc4f7e93dff9fc94"
+                "sha256:fa8280b79d8a2b267a2e43ff44f73b3e4a68fc8d205b8d34e8e06c960f7c2fcf",
+                "sha256:fc3290a2ca337d1d58c579c223201360bfe74caed6454eaf5a2550b77dbda45c"
             ],
-            "version": "==2020.10"
+            "version": "==2020.11"
         }
     }
 }

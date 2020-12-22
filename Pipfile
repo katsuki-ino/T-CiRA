@@ -12,6 +12,8 @@ dash-html-components = "*"
 flask = "*"
 dash-table = "*"
 gunicorn = "*"
+flask-login = "*"
+dash-auth = "*"
 
 [dev-packages]
 pyinstaller = "*"
