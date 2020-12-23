@@ -59,7 +59,7 @@ app.layout = html.Div(
                     ],
                     page_action='none',
                     fixed_rows={'headers': True},
-                    style_table={'height': '200px', 'overflowY': 'auto'}
+                    style_table={'height': 'auto', 'overflowY': 'auto'}
                 ),
             ]) 
         ], style={'width':'40%'}),
@@ -76,8 +76,11 @@ app.layout = html.Div(
                         'width': '15%'},
                     ],
                     page_action='none',
+                    style_cell={
+                        'maxWidth':'350px'
+                    },
                     fixed_rows={'headers': True},
-                    style_table={'height': '200px', 'overflowY': 'auto'})
+                    style_table={'height': 'auto', 'overflowY': 'auto'})
             ])
         ], style={'width':'40%', 'margin-left':'40px'}),
     ], style={'display':'flex'}),
