@@ -79,24 +79,18 @@ def paging():
 
 
 def make_drug_table(target):
-    def make_tooptip(drug):
-        indications = drug_properties[drug_properties['compound_name']==drug]
-        if len(indications)==0:
-            return 'No Drug Indication'
-        else:
-            sent = 'Drug Indications  \n [Target Disease: Clinical Phase]  \n\n\n'
-            
-            for efo, max_phase in zip(indications['efo_term'], indications['max_phase_for_ind']):
-                line = '{}: {}  \n'.format(efo, max_phase)
-                sent += line
-            return sent
-
     drugs = phase_df.loc[target, 'Drug']
     phases = phase_df.loc[target, 'Phase']
     df = pd.DataFrame({'Drug':drugs, 'Phase':phases})
 
-    tooltip = [{
-        c: {'value': make_tooptip(drug), 'type': 'markdown'}
-        for c in ['Drug']
-    } for drug in drugs]
-    return df.to_dict('records'), tooltip
+    df = df.sort_values(['Phase','Drug'], ascending=[False, True])
+    return df.to_dict('records')
+
+def make_indications_tabledata(target):
+    indications = drug_properties[drug_properties['compound_name']==target].sort_values(['max_phase_for_ind', 'efo_term'], ascending=[False, True])
+
+    if len(indications)==0:
+        return [{'efo_term':'Nothing', 'max_phase':'-'}]
+    res_df = indications[['efo_term', 'max_phase_for_ind']]
+    res_df.columns = ['efo_term', 'max_phase']
+    return res_df.to_dict('records')
