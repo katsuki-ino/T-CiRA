@@ -87,10 +87,10 @@ def make_drug_table(target):
     return df.to_dict('records')
 
 def make_indications_tabledata(target):
-    indications = drug_properties[drug_properties['compound_name']==target].sort_values(['max_phase_for_ind', 'mesh_heading'], ascending=[False, True])
+    indications = drug_properties[drug_properties['compound_name']==target].sort_values(['max_phase_for_ind', 'efo_term', 'mesh_heading'], ascending=[False, True, True])
 
     if len(indications)==0:
-        return [{'mesh_heading':'Nothing', 'max_phase':'-'}]
-    res_df = indications[['mesh_heading', 'max_phase_for_ind']]
-    res_df.columns = ['mesh_heading', 'max_phase']
+        return [{'mesh_heading':'-', 'efo_term': '-', 'max_phase':'-'}]
+    res_df = indications[['mesh_heading', 'efo_term','max_phase_for_ind']]
+    res_df.columns = ['mesh_heading', 'efo_term','max_phase']
     return res_df.to_dict('records')

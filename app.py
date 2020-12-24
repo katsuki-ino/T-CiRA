@@ -62,27 +62,28 @@ app.layout = html.Div(
                     style_table={'height': 'auto', 'overflowY': 'auto'}
                 ),
             ]) 
-        ], style={'width':'40%'}),
+        ], style={'width':'25%'}),
         html.Div([
             html.Div([
                 html.H3(id='ind_name'),
                 dash_table.DataTable(
-                    columns=[{'id': c, 'name': c} for c in ['mesh_heading', 'max_phase']],
+                    columns=[{'id': c, 'name': c} for c in ['mesh_heading', 'efo_term','max_phase']],
                     id='indication_table',
-                    style_cell_conditional=[
-                        {'if': {'column_id': 'mesh_heading'},
-                        'width': '85%'},
-                        {'if': {'column_id': 'max_phase'},
-                        'width': '15%'},
-                    ],
+                    # style_cell_conditional=[
+                    #     {'if': {'column_id': 'mesh_heading'},
+                    #     'width': '85%'},
+                    #     {'if': {'column_id': 'max_phase'},
+                    #     'width': '15%'},
+                    # ],
                     page_action='none',
                     style_cell={
-                        'maxWidth':'350px'
+                        'minWidth':'30px',
+                        'maxWidth': '200px',
                     },
                     fixed_rows={'headers': True},
                     style_table={'height': 'auto', 'overflowY': 'auto'})
             ])
-        ], style={'width':'40%', 'margin-left':'40px'}),
+        ], style={'width':'70%', 'margin-left':'40px'}),
     ], style={'display':'flex'}),
     ]
 )
