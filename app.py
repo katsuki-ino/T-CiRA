@@ -67,10 +67,10 @@ app.layout = html.Div(
             html.Div([
                 html.H3(id='ind_name'),
                 dash_table.DataTable(
-                    columns=[{'id': c, 'name': c} for c in ['efo_term', 'max_phase']],
+                    columns=[{'id': c, 'name': c} for c in ['mesh_heading', 'max_phase']],
                     id='indication_table',
                     style_cell_conditional=[
-                        {'if': {'column_id': 'efo_term'},
+                        {'if': {'column_id': 'mesh_heading'},
                         'width': '85%'},
                         {'if': {'column_id': 'max_phase'},
                         'width': '15%'},
