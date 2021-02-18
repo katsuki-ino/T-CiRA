@@ -79,16 +79,16 @@ def generate_stylesheet():
             "height": "60",
         } 
         },
-        # {
-        # "selector": "edge",
-        # "style": {
+        {
+        "selector": "edge",
+        "style": {
         #     "curve-style": "bezier",
         #     "haystack-radius": "0.7",
         #     "opacity": "1",
         #     "line-color": "#bbb",
-        #     "width": "mapData(weight, 0, 1, 1, 500)",
+            "width": "mapData(weight, 0, 1, 1, 120)",
         #     "overlay-padding": "3px",
-        # }}
+        }}
     ]
 
     # for num in range(max_id):
