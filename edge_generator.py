@@ -27,12 +27,13 @@ def paging():
 
     edges = []
     for source, target, flow in zip(path['sources'], path['targets'], path['flow']):
+        score = flow
         if flow > 0.1:
             flow = 0.1
         if source=='S' or target=='E':
             continue
         else:
-            edges.append({'data':{'source': source, 'target': target, 'weight':flow}, 'selectable': 'True'})
+            edges.append({'data':{'source': source, 'target': target, 'weight':flow, 'score':score}, 'selectable': 'True'})
 
     # node処理
     nodes = []

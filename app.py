@@ -44,6 +44,7 @@ auth = dash_auth.BasicAuth(
 app.layout = html.Div(
     [
     cytograph,
+    html.P('EdgeScore:', id='edge_score'),
     html.Div([
         html.Div([
             html.Div([
@@ -106,6 +107,13 @@ def update_indications(cells, data):
     df = pd.DataFrame.from_dict(data)
     target = df.iloc[row, 0]
     return make_indications_tabledata(target), 'Drug Indication: '+target
+
+
+@app.callback([Output('edge_score', 'children')],
+            [Input('cytoscape-elements-classes', 'tapEdgeData')])           
+def display_score_by_tap(target):
+    score = target['score']
+    return ['EdgeScore:{}'.format(score)]
 
 
 if __name__ == "__main__":
