@@ -86,7 +86,7 @@ def generate_stylesheet():
         #     "haystack-radius": "0.7",
         #     "opacity": "1",
         #     "line-color": "#bbb",
-            "width": "mapData(weight, 0, 1, 1, 120)",
+            "width": "mapData(weight, 0, 1, 1, 500)",
         #     "overlay-padding": "3px",
         }}
     ]

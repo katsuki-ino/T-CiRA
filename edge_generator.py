@@ -27,6 +27,8 @@ def paging():
 
     edges = []
     for source, target, flow in zip(path['sources'], path['targets'], path['flow']):
+        if flow > 0.1:
+            flow = 0.1
         if source=='S' or target=='E':
             continue
         else:
