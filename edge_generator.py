@@ -18,10 +18,10 @@ import dash_table
 
 class DataVersion_Manager:
     def __init__(self):
-        with open('data/v1/gene_drug_report.pkl', 'rb') as f:
+        with open('data/v2/gene_drug_report.pkl', 'rb') as f:
             self.phase_df = pickle.load(f)
 
-        with open('data/v1/drug_properties.pkl', 'rb') as f:
+        with open('data/v2/drug_properties.pkl', 'rb') as f:
             self.drug_properties = pickle.load(f)
 
         self.path_data = pd.read_table('data/v1/plot_graph_data.txt')
@@ -38,11 +38,11 @@ class DataVersion_Manager:
 
 
     def update_selfvalue(self, ver):
-        with open('data/'+ver+'/gene_drug_report.pkl', 'rb') as f:
-            self.phase_df = pickle.load(f)
+        # with open('data/'+ver+'/gene_drug_report.pkl', 'rb') as f:
+        #     self.phase_df = pickle.load(f)
 
-        with open('data/'+ver+'/drug_properties.pkl', 'rb') as f:
-            self.drug_properties = pickle.load(f)
+        # with open('data/'+ver+'/drug_properties.pkl', 'rb') as f:
+        #     self.drug_properties = pickle.load(f)
 
         self.path_data = pd.read_table('data/'+ver+'/plot_graph_data.txt')
 
