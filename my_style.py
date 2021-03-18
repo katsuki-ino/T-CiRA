@@ -78,6 +78,12 @@ def generate_stylesheet():
             "width": "60",
             "height": "60",
         } 
+        },{
+        "selector": ".share",
+        "style": {
+            "border-color": "#3468eb",
+            "border-width": "8px",
+        } 
         },
         {
         "selector": "edge",

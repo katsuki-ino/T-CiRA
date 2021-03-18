@@ -5,10 +5,10 @@ import dash
 import dash_cytoscape as cyto
 
 from my_style import generate_stylesheet
-from edge_generator import paging
+# from edge_generator import paging
 
-nodes, edges = paging()
-es = nodes+edges
+# nodes, edges = paging()
+# es = nodes+edges
 
 cytograph =  cyto.Cytoscape(
                     id='cytoscape-elements-classes',
@@ -27,6 +27,6 @@ cytograph =  cyto.Cytoscape(
                             'border-radius': '5px',
                             'border-color': '#3498DB'
                             },
-                    elements=es,
+                    # elements=es,
                     boxSelectionEnabled=True,
 )
