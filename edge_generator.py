@@ -130,7 +130,7 @@ class DataVersion_Manager:
         df = df.sort_values(['Phase','Drug'], ascending=[False, True])
         
         # gene table style
-        drugs = [i.upper() for i in drugs]
+        drugs = [i.upper() for i in df['Drug']]
         index_list = [i for i, v in enumerate(drugs) if v in self.share_drug]
         table_condition_data = []
         # print('share', self.share_drug)
